@@ -6,26 +6,34 @@ import styled from 'styled-components'
 
 const Tag = styled.div`
   position: relative;  
-  color: white;
+  color: white;    
   background:${props => (props.tagColor)};
-  padding: 20px 22px;
-  border-radius: 24px;
-  font-size: 2em;
-  transition: background-color 1s linear
+  width: 80px;
+  padding: 8px 12px;
+  margin: 4px;
+  border-radius: 18px;
+  font-size: 1em;
+  font-weight: 400;
+  transition: background-color 2s linear
 `
+
+const randomColor = () => '#' + Math.floor(Math.random()*16777215).toString(16)
 
 function App() {
   const [tagColor, setTagColor] = useState('red')
   
+  
   setTimeout(() => {
-    const randomColor ='#' + Math.floor(Math.random()*16777215).toString(16);
     setTagColor(randomColor);    
-  }, 2000);
+  }, 3000);
 
   return (
     <div className="App">
       {/* <h1 style={{ color: {tagColor} }}>Here</h1> */}
-      <Tag tagColor={tagColor}>Here</Tag>      
+      <Tag tagColor={randomColor}>Java</Tag>
+      <Tag tagColor={randomColor}>Kotlin</Tag>
+      <Tag tagColor={randomColor}>Android</Tag>      
+      <Tag tagColor={randomColor}>JavaScript</Tag>  
     </div>
   )
 }
