@@ -23,7 +23,10 @@ function App() {
   const [tagColor, setTagColor] = useState('red')
   
   
-  setTimeout(() => {
+//   setTimeout(() => {
+//     setTagColor(randomColor);    
+//   }, 3000);
+   setInterval(() => {
     setTagColor(randomColor);    
   }, 3000);
 
