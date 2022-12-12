@@ -22,10 +22,6 @@ const randomColor = () => '#' + Math.floor(Math.random()*16777215).toString(16)
 function App() {
   const [tagColor, setTagColor] = useState('red')
   
-  
-//   setTimeout(() => {
-//     setTagColor(randomColor);    
-//   }, 3000);
    setInterval(() => {
     setTagColor(randomColor);    
   }, 3000);
@@ -33,10 +29,10 @@ function App() {
   return (
     <div className="App">
       {/* <h1 style={{ color: {tagColor} }}>Here</h1> */}
-      <Tag tagColor={randomColor}>Java</Tag>
-      <Tag tagColor={randomColor}>Kotlin</Tag>
-      <Tag tagColor={randomColor}>Android</Tag>      
-      <Tag tagColor={randomColor}>JavaScript</Tag>  
+      <Tag tagColor={tagColor}>Java</Tag>
+      <Tag tagColor={tagColor}>Kotlin</Tag>
+      <Tag tagColor={tagColor}>Android</Tag>      
+      <Tag tagColor={tagColor}>JavaScript</Tag>  
     </div>
   )
 }
